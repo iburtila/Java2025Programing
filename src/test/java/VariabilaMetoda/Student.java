@@ -1,5 +1,6 @@
 package VariabilaMetoda;
 
+import org.testng.annotations.Test;
 
 public class Student {
     //Clasa = sablon care defineste proprietatile si comportamentul unei entitati specifice
@@ -33,7 +34,7 @@ public class Student {
     public Character Sex;
     public Boolean AreDiploma;
 
-
+    @Test
     public void prezentareStudent(){
         Nume = "Burtila";
         Prenume = "Bogdan Ioan";
@@ -44,6 +45,26 @@ public class Student {
         Sex = 'M';
         AreDiploma = true;
 
-        System.out.println(Nume+" "+Prenume);
+        //System.out.println(Nume+" "+Prenume+" "+Varsta+" "+Adress);
+        //System.out.println(Inaltime);
+
+        System.out.println("Numele studentului este: "+Nume);
+        System.out.println("Prenumele studentului este: "+Prenume);
+        System.out.println("Varsta studentului este: "+Varsta);
+        System.out.println("Adresa studentului este: "+Adress);
+        System.out.println("Inaltimea studentului este: "+Inaltime);
+        System.out.println("Greutatea studentului este: "+Greutate);
+        System.out.println("Sexul studentului este: "+Sex);
+        System.out.println("Are studentul diploma? "+AreDiploma);
+
+        calculMedia();
+    }
+
+    public void calculMedia(){
+        double nota1 = 8.5;
+        double nota2 = 7.5;
+        double nota3 = 9.0;
+        double medie = (nota1+nota2+nota3)/3;
+        System.out.println("Media Studentului "+Nume+" "+Prenume+" este: "+medie);
     }
 }
